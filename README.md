@@ -19,7 +19,7 @@ Para poner en marcha la web, ejecuta el siguiente comando en tu terminal:
 
 ```bash
 sudo docker compose up -d
-
+```
 
 ## 🌐 ¿Dónde veo mi web?
 
@@ -28,5 +28,7 @@ Una vez que los contenedores estén rugiendo (y hayas esperado los segundos de r
 
 * 📍 **Web:** [http://localhost:8888](http://localhost:8888)
 * 📍 **Panel de Control (Admin):** [http://localhost:8888/wp-admin](http://localhost:8888/wp-admin)
+
+Los botones de la tienda están configurados en color blanco, por eso no se ven ahora, te dejo adivinar como cambiarlos a un color mejor como reto, suerte!
 
 
