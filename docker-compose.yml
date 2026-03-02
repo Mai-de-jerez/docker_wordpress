@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: wp-db
+    restart: unless-stopped
+    ports:
+      - "3360:3306"
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: mai
+      MYSQL_PASSWORD: mai1234
+      MYSQL_ROOT_PASSWORD: mai1234
+    volumes:
+      - wp-db:/var/lib/mysql
+    networks:
+      - wp-net
+
+  wordpress:
+    image: mai1985/morfeo-wordpress:latest   
+    container_name: wp-web
+    restart: unless-stopped
+    ports:
+      - "8888:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: mai
+      WORDPRESS_DB_PASSWORD: mai1234
+    depends_on:
+      - db
+    networks:
+      - wp-net
+
+volumes:
+  wp-db:
+  wp-html:
+
+networks:
+  wp-net:
+    driver: bridge
