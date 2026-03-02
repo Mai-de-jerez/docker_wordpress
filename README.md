@@ -83,7 +83,7 @@ Esto para los contenedores pero **no borra nada**. La próxima vez que hagas `do
 ## 📁 Estructura del proyecto
 
 ```
-📦 tu-repositorio/
+📦 docker_wordpress/
 ├── 🐳 docker-compose.yml      ← El archivo que configura todo
 ├── 📄 wordpress.sql           ← La base de datos con todo el contenido
 ├── 📁 wp-content/             ← Temas, plugins e imágenes del sitio
